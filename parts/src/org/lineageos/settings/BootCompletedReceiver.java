@@ -20,6 +20,7 @@ package org.lineageos.settings;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import org.lineageos.settings.haptic.HapticUtils;
 import android.util.Log;
 
 import org.lineageos.settings.doze.DozeUtils;
@@ -33,5 +34,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (DEBUG)
             Log.d(TAG, "Received boot completed intent");
         DozeUtils.onBootCompleted(context);
+
+        // Haptic
+        HapticUtils.restoreLevel(context);
     }
 }
