@@ -13,6 +13,9 @@ debug.hwui.skia_atrace_enabled=false
 # IMS
 persist.vendor.qti.telephony.vt_cam_interface=2
 
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
 # Media
 media.aac_51_output_enabled=true
 media.stagefright.enable-aac=true
